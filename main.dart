@@ -45,12 +45,12 @@ class MainApp extends StatelessWidget {
                         ),
                         textAlign: TextAlign.center,
                       ),
-                      Image.asset(
-                        'assets/weather_loading.png',
-                        scale: 2,
-                      ),
+                      // Image.asset(
+                      //   'assets/weather_loading.png',
+                      //   scale: 2,
+                      // ),
                       const SizedBox(height: 24),
-                      // const CircularProgressIndicator(),
+                      const CircularProgressIndicator(),
                     ],
                   ),
                 ),

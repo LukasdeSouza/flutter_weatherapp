@@ -145,8 +145,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         const SizedBox(height: 8),
                         Center(
                           child: SizedBox(
-                            width: 200,
-                            height: 150,
+                            width: 170,
+                            height: 130,
                             child: currentWeatherIcon(state.weather.weatherConditionCode!),
                           ),
                         ),
