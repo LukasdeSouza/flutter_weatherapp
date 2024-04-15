@@ -20,7 +20,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
 
   Widget currentWeatherIcon(int code) {
-    print('code $code');
     switch(code) {
       case >= 200 && < 300 :
       return Image.asset(
