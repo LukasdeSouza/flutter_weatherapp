@@ -20,6 +20,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
 
   Widget currentWeatherIcon(int code) {
+    print('code $code');
     switch(code) {
       case >= 200 && < 300 :
       return Image.asset(
@@ -150,6 +151,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: currentWeatherIcon(state.weather.weatherConditionCode!),
                           ),
                         ),
+                        SizedBox(height: 16),
                          Center(
                           child: Text(
                             '${state.weather.temperature?.celsius?.round()}º C',
@@ -174,7 +176,6 @@ class _HomeScreenState extends State<HomeScreen> {
                          Center(
                           child: Text(
                             DateFormat('EEEE dd .').add_jm().format(state.weather.date!),
-                            // 'Friday 16 - 09:41am',
                             style: const TextStyle(
                               color: Colors.black54,
                               fontSize: 14,
@@ -204,7 +205,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                         fontSize: 12
                                       )
                                     ),
-                                    // const SizedBox(height: 2),
                                     Text(
                                       DateFormat().add_jm().format(state.weather.sunrise!),
                                       style: const TextStyle(
@@ -235,7 +235,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                         fontSize: 12
                                       )
                                     ),
-                                    // const SizedBox(height: 2),
                                     Text(
                                       '${state.weather.windSpeed}',
                                       style: const TextStyle(
@@ -265,7 +264,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                       fontSize: 12
                                     )
                                   ),
-                                  // const SizedBox(height: 2),
                                   Text(
                                     DateFormat().add_jm().format(state.weather.sunset!),
                                     style: const TextStyle(
@@ -306,7 +304,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                         fontSize: 12
                                       )
                                     ),
-                                    // const SizedBox(height: 2),
                                     Text(
                                       '${state.weather.tempMax?.celsius?.round()}º C',
                                       style: const TextStyle(
@@ -336,7 +333,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                         fontSize: 12
                                       )
                                     ),
-                                    // const SizedBox(height: 2),
                                     Text(
                                       '${state.weather.tempFeelsLike?.celsius?.round()}º C',
                                       style: const TextStyle(
@@ -366,7 +362,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                       fontSize: 12
                                     )
                                   ),
-                                  // const SizedBox(height: 2),
                                   Text(
                                     '${state.weather.tempMin?.celsius?.round()}º C',
                                     style: const TextStyle(
